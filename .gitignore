@@ -32,3 +32,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#Costum
+BallsRaceGame3D/.idea/*
+BallsRaceGame3D/.idea/
+BallsRaceGame3D/.vs/*
+BallsRaceGame3D/.vs/
