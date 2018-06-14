@@ -4,20 +4,39 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-	public float speed;
+    
+	public float speed=20.0f;
+	public float lRspeed=1.0f;
+
+	private Vector3 moveV;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		float h = Input.GetAxis("Horizontal");
-		float v = Input.GetAxis("Vertical");
-		
-		Vector3 d =new Vector3(h,0,v);
-		
-		gameObject.transform.Translate(d.normalized*Time.deltaTime* speed);
 	}
+
+	void FixedUpdate()
+	{
+		playerMovement();
+	}
+	
+	void playerMovement()
+	{
+		moveV =Vector3.zero;
+
+		//Left Right Modement
+		moveV.x = (Input.GetAxisRaw("Horizontal")*lRspeed)*Time.deltaTime;
+
+		//Forward Movement
+		moveV.z = speed * Time.deltaTime;
+		
+		//Move
+		transform.Translate(moveV.x,0,moveV.z);
+	}
+
 }
