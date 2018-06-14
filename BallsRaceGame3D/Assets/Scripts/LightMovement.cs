@@ -23,6 +23,9 @@ public class LightMovement : MonoBehaviour {
 		moveLight();
 	}
 	
+	/*
+	 * @brief Move light based on player's possition
+	 */
 	void moveLight()
 	{
 		//Find player's position 

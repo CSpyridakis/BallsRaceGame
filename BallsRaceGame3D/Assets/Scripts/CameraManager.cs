@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-
 	private Transform pT;
 	private Vector3 offset;
 	private Vector3 moveV;
@@ -25,20 +24,18 @@ public class CameraManager : MonoBehaviour
 		moveCamera();
 	}
 
+	/*
+	 * @brief Move camera based on player's possition
+	 */
 	void moveCamera()
 	{
-		
 		//Find player's position 
 		moveV = pT.position + offset;
 		
-		//if (pT.position.z + offset.z = moveV.z)
-		//{
-			//Fix camera movements
-			moveV.x = 3.5f;
-			//moveV.y = Mathf.Clamp(moveV.y, 3, 5); 
-		
-			//Move camera
-			transform.position = moveV;
-		//}
+		//Fix camera movements
+		moveV.x = 3.5f;
+	
+		//Move camera
+		transform.position = moveV;
 	}
 }
