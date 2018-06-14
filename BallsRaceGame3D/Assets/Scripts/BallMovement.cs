@@ -9,6 +9,7 @@ public class BallMovement : MonoBehaviour
 	public float speedUpLimit=70.0f;
 	public float currentSpeed=5.0f;
 	public float speedDecreaseRate=1.0f;
+	public float speedIncreaseRate = 5.0f;
 	public float leftRightspeed=14.0f;
 
 	private Vector3 moveV;
@@ -50,11 +51,11 @@ public class BallMovement : MonoBehaviour
 		}
 	}
 
-	public void speedIncrease(float s)
+	public void speedIncrease()
 	{
-		if (currentSpeed+s<=speedUpLimit)
+		if (currentSpeed+speedIncreaseRate<=speedUpLimit)
 		{
-			currentSpeed += s;
+			currentSpeed += speedIncreaseRate;
 		}
 	}
 
