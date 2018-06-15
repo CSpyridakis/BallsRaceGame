@@ -17,6 +17,7 @@ public class BallMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		Debug.Log("Begin Ball Movement");
 	}
 	
 	// Update is called once per frame

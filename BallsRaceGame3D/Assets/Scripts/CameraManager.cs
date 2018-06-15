@@ -11,6 +11,7 @@ public class CameraManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		Debug.Log("Begin Camera Manager");
 		//Find players object based on tag
 		pT = GameObject.FindGameObjectWithTag("Player").transform;
 		

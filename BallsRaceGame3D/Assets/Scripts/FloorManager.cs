@@ -12,8 +12,8 @@ public class FloorManager : MonoBehaviour
 	public GameObject[] floorPrefabs;	//all available floors to spawn
 	public int numActiveFloors = 10;
 
+	public float spawnz = -61f;		//Current floor's spawn z position
 	private Transform pT;				//current GameObject Transform Component in order to move it's possition
-	private float spawnz = -61f;		//Current floor's spawn z position
 	private float floorL = 61f;			//Length of each floor
 	private List<GameObject> spawnedFloors =new List<GameObject>();	//List of spawned Floors (In order to delete last one)
 	private int lastFloorI = 0;			//Id of last spawned floor
@@ -22,6 +22,7 @@ public class FloorManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		Debug.Log("Begin Floor Manager");
 		//pT = playersTransform
 		pT = GameObject.FindGameObjectWithTag("Player").transform;
 		

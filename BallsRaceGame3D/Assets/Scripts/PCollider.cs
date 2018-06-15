@@ -6,24 +6,19 @@ public class PCollider : MonoBehaviour
 {
 
 	public BallMovement bM;
-	// Use this for initialization
+	
 	void Start () {
-		
+		Debug.Log("Begin Ball Collider");
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
-	void OnCollisionEnter(Collision other)
+
+	private void OnTriggerEnter(Collider other)
 	{
-		if (other.collider.tag == "Obstacle")
-		{
-			bM.enabled = false;
-			Debug.Log("Dead");
-		}    
-		
-		if (other.collider.tag == "Booster")
+
+		if (other.gameObject.CompareTag("Booster"))
 		{
 			bM.speedIncrease();
 			Debug.Log("Boost");
