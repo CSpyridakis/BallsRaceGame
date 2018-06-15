@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-	private Transform pT;
-	private Vector3 offset;
+	public Transform pT;
+	public Vector3 offset;
 	private Vector3 moveV;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		Debug.Log("Begin Camera Manager");
-		//Find players object based on tag
-		pT = GameObject.FindGameObjectWithTag("Player").transform;
-		
-		//Create offset
-		offset = transform.position - pT.position;
 	}
 	
 	// Update is called once per frame

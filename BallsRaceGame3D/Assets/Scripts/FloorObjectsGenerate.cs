@@ -61,8 +61,8 @@ public class FloorObjectsGenerate : MonoBehaviour
 		gO.transform.SetParent(transform);
 		Vector3 mv;
 		mv.z = spawnz;
-		mv.y = 0.1f;
-		mv.x = Random.Range(0.8f,8.2f);
+		mv.y = 0.05f;
+		mv.x = Random.Range(-1.75f,8.75f);
 		gO.transform.position= mv;
 		spawnedObjects.Add(gO);
 	}
@@ -75,7 +75,7 @@ public class FloorObjectsGenerate : MonoBehaviour
 		Vector3 mv;
 		mv.z = spawnz;
 		mv.y = 1.0f;
-		mv.x = Random.Range(0.8f,8.2f);
+		mv.x = Random.Range(-1.75f,8.75f);
 		gO.transform.position= mv;
 		spawnedObjects.Add(gO);
 	}

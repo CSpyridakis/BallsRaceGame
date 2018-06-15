@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95582347293030744}
   - component: {fileID: 64142644036912566}
   m_Layer: 0
-  m_Name: HexNCVisible
+  m_Name: HexNCBoost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

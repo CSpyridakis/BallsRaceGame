@@ -7,26 +7,31 @@ public class ScoreManager : MonoBehaviour
 {
 
 	public Text scoreBoard;
+	public Text distanceBoard;
+	public Transform pT;
 
 	private float score=0.0f;
 	
 	// Use this for initialization
 	void Start () {
-		score = scoreUpdate(score, 0.0f);
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		score = scoreUpdate(score, Time.deltaTime);
+		scoreUpdate(Time.deltaTime);
+		distanceUpdate(pT.transform);
 	}
 	
-	public float scoreUpdate(float s,float acv)
+	public void distanceUpdate(Transform pt)
 	{
-		s+=acv;
-		int scor = (int) s;
-		//scor /= 10;
-		scoreBoard.text = scor.ToString();
-		return s;
+		Vector3 dis = pt.position;
+		distanceBoard.text = (((int)(dis.z/10))*10).ToString();
+	}
+	
+	public void scoreUpdate(float acv)
+	{
+		score+=acv;
+		scoreBoard.text = ((int)score).ToString();
 	}
 }

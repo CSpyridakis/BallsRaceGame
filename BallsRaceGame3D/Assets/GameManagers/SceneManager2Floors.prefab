@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1016741001882422}
+  m_RootGameObject: {fileID: 1470099110889538}
   m_IsPrefabParent: 1
---- !u!1 &1016741001882422
+--- !u!1 &1470099110889538
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4284582895909394}
-  - component: {fileID: 114356961289667986}
+  - component: {fileID: 4714641457414098}
+  - component: {fileID: 114234192164562526}
   m_Layer: 0
   m_Name: SceneManager2Floors
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4284582895909394
+--- !u!4 &4714641457414098
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1016741001882422}
+  m_GameObject: {fileID: 1470099110889538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,18 +40,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114356961289667986
+--- !u!114 &114234192164562526
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1016741001882422}
+  m_GameObject: {fileID: 1470099110889538}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2880d3c253d46e44182760bcba4a59a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   floorPrefabs:
-  - {fileID: 1600570950931464, guid: 5da8eab25b34a914ba11590653a3b8cc, type: 2}
-  - {fileID: 1051932350191896, guid: 7ed2336ec7d5657489078519b389155b, type: 2}
+  - {fileID: 1935203037504214, guid: c760da53748d437498a544e1e11a53dd, type: 2}
+  buildingsPrefabs:
+  - {fileID: 1545457697636768, guid: 3d228e7085119f342b615a99bf4a1e3d, type: 2}
+  - {fileID: 1153237533690618, guid: 7a97ff40aed256f44a294830aaacc1f7, type: 2}
   numActiveFloors: 10
+  spawnz: -61
