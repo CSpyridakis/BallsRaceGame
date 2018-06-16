@@ -12,9 +12,14 @@ public class ObstacleCollisionManager : MonoBehaviour
 		if (other.collider.tag == "Player")
 		{
 			Debug.Log("Player hit Obstacle");
-			GameObject.FindObjectOfType<GameManage>().ExitGame();
+			Invoke("Exit",0.3f);
 		}
 		
+	}
+
+	private void Exit()
+	{
+		GameObject.FindObjectOfType<GameManage>().ExitGame();
 	}
 }
 

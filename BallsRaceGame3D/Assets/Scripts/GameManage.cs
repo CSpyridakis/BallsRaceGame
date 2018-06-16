@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class GameManage : MonoBehaviour {
     public int gameDifficulty=1;
+
+    public GameObject GameOver;
+    public GameObject GameStatus;
+    public GameObject GameMenu;
     // Use this for initialization
     void Start()
     {
         Debug.Log("Begin Game Manage: OK");
-        //PauseGame();
-        PlayGame();
+        PauseGame();
+        GameMenu.active=true ;
+        GameOver.active = false;
+        GameStatus.active = false;
     }
     
     
@@ -22,6 +29,9 @@ public class GameManage : MonoBehaviour {
         {
             o.GetComponent<OpponentMovement>().enabled = false;
         }
+        GameMenu.active=false ;
+        GameOver.active = true;
+        GameStatus.active = false;
     }
 
     public void PlayGame()
@@ -33,6 +43,9 @@ public class GameManage : MonoBehaviour {
         {
             o.GetComponent<OpponentMovement>().enabled = true;
         }
+        GameMenu.active=false ;
+        GameOver.active = false;
+        GameStatus.active = true;
     }
 
     public void ExitGame()
@@ -40,5 +53,15 @@ public class GameManage : MonoBehaviour {
         PauseGame();
         //TODO PlayMusic
         //TODO RESTART
+    }
+
+    public void RestartGame()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }
