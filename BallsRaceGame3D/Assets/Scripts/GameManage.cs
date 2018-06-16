@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManage : MonoBehaviour {
-
+    public int gameDifficulty=1;
     // Use this for initialization
     void Start()
     {

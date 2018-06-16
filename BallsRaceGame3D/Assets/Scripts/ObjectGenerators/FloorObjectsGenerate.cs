@@ -13,6 +13,7 @@ public class FloorObjectsGenerate : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		difficultyLevel = GameObject.FindObjectOfType<GameManage>().gameDifficulty;
 		float start = transform.position.z;
 		float pos = start;
 		
