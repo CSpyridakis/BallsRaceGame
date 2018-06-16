@@ -9,17 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1376019254387958}
+  m_RootGameObject: {fileID: 1638437120881006}
   m_IsPrefabParent: 1
---- !u!1 &1376019254387958
+--- !u!1 &1638437120881006
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4681904806692738}
-  - component: {fileID: 114245903955379892}
+  - component: {fileID: 4618273774251758}
+  - component: {fileID: 114318033500875056}
+  - component: {fileID: 114265826577448102}
+  - component: {fileID: 114369357475125780}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -27,12 +29,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4681904806692738
+--- !u!4 &4618273774251758
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376019254387958}
+  m_GameObject: {fileID: 1638437120881006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 192.61469, y: 189.30716, z: 895.7288}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +42,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114245903955379892
+--- !u!114 &114265826577448102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376019254387958}
+  m_GameObject: {fileID: 1638437120881006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a3539608825254ba1bc67b72f0d6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponentObject: {fileID: 1554237559800026, guid: a026d94f0dc76b244bec14b03c666349,
+    type: 2}
+  OpponentsNum: 10
+  StartingPoint: -61
+--- !u!114 &114318033500875056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638437120881006}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2880d3c253d46e44182760bcba4a59a7, type: 3}
@@ -60,3 +77,14 @@ MonoBehaviour:
   - {fileID: 1079394795986072, guid: 2d5072b42ce29654da5af01e8178a369, type: 2}
   numActiveFloors: 10
   spawnz: -61
+--- !u!114 &114369357475125780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638437120881006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8746d4680ef39464188d19240a242238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
