@@ -10,7 +10,7 @@ public class LightMovement : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Begin Light Manager: OK");
+		//Debug.Log("Begin Light Manager: OK");
 		offset = transform.position - pT.position;
 	}
 	

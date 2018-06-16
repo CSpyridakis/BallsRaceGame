@@ -10,7 +10,7 @@ public class OpponentManager : MonoBehaviour
 	
 	// Use this for initialization
 	void Awake() {
-		Debug.Log("Begin Opponents Manager: OK");
+		//Debug.Log("Begin Opponents Manager: OK");
 		//Create N Opponents
 		float diss = 61f/OpponentsNum;
 		for (int i =0; i<OpponentsNum; i++)

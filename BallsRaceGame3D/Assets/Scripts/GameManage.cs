@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.Experimental.UIElements;
 
 public class GameManage : MonoBehaviour {
-    public int gameDifficulty=1;
+    public int gameDifficulty=0;
 
     public GameObject GameOver;
     public GameObject GameStatus;
@@ -14,16 +15,21 @@ public class GameManage : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Debug.Log("Begin Game Manage: OK");
+        //Debug.Log("Begin Game Manage: OK");
         PauseGame();
         GameMenu.active=true ;
         GameOver.active = false;
         GameStatus.active = false;
     }
-    
+
+    private void Update()
+    {
+        //gameDifficulty = ;
+        gameDifficulty++;
+    }
+
     public void PauseGame()
     {
-        bool fl = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().enabled=false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<ScoreManager>().enabled=false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<BallMovementAlternative>().enabled=false;

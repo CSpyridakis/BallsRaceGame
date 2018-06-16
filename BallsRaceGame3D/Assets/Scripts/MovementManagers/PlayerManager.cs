@@ -17,7 +17,7 @@ public class PlayerManager : MonoBehaviour
 	void Start ()
 	{
 		currentSpeed = speedDownLimit;
-		Debug.Log("Begin Ball Manager: OK");
+		//Debug.Log("Begin Ball Manager: OK");
 	}
 
 	void FixedUpdate()

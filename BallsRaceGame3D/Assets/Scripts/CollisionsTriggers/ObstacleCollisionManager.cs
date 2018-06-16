@@ -12,7 +12,7 @@ public class ObstacleCollisionManager : MonoBehaviour
 		if (other.collider.tag == "Player")
 		{
 			GameObject.FindObjectOfType<MusicManager>().Play("Obstacle");
-			Debug.Log("Player hit Obstacle");
+			//Debug.Log("Player hit Obstacle");
 			Invoke("Exit",0.3f);
 		}
 		

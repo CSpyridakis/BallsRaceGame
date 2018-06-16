@@ -14,7 +14,7 @@ public class OpponentMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log("Begin Ball Movement: OK");
+		//Debug.Log("Begin Ball Movement: OK");
 		currentSpeed=Random.Range(7f,16f);
 	}
 	
@@ -55,13 +55,13 @@ public class OpponentMovement : MonoBehaviour {
 	{
 		if (other.tag=="Booster")
 		{
-			Debug.Log("Enemy Booster");
+			//Debug.Log("Enemy Booster");
 			speedIncrease();
 		}
         
 		if (other.tag == "Obstacle")
 		{
-			Debug.Log("Enemy Obstacle");
+			//Debug.Log("Enemy Obstacle");
 			Destroy(gameObject);
 		}
 	}

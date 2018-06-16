@@ -13,7 +13,6 @@ public class MusicManager : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
-		Start();
 		foreach (MusicClip o in audioFiles)
 		{
 			o.source = gameObject.AddComponent<AudioSource>();
@@ -22,7 +21,8 @@ public class MusicManager : MonoBehaviour
 			o.source.loop = o.loop;
 		}
 	}
-
+	
+	
 	private void Start()
 	{
 		Play("MenuSound");
@@ -46,9 +46,18 @@ public class MusicManager : MonoBehaviour
 		{
 			if (o.AudioName.Equals(audioName))
 			{
+				if (o.AudioName.Equals("MenuSound"))
+				{
+					o.source.volume = 0.001f;
+				}
+				else
+				{
+					o.source.volume = 0.7f;
+				}
 				o.source.Play();
 			}
-		}	
+		}
+
 	}
 	
 	public void Pause(string audioName)

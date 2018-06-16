@@ -24,7 +24,7 @@ public class FloorManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		Debug.Log("Begin Floor Manager: OK");
+		//Debug.Log("Begin Floor Manager: OK");
 		//pT = playersTransform
 		pT = GameObject.FindGameObjectWithTag("Player").transform;
 		
