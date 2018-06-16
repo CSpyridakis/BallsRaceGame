@@ -13,6 +13,8 @@ public class ObstacleCollisionManager : MonoBehaviour
 		{
 			Debug.Log("Player hit Obstacle");
 			other.collider.GetComponent<PlayerManager>().enabled=false;
+			other.collider.GetComponent<ScoreManager>().enabled=false;
+			other.collider.GetComponent<BallMovementAlternative>().enabled=false;
 			//TODO play music
 			//TODO exit
 		}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     
-	public float speedDownLimit=3000;
+	public float speedDownLimit=5;
 	public float speedUpLimit=70.0f;
 	public float currentSpeed;
 	public float speedIncreaseRate = 5.0f;
@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviour
 
 	public void speedIncrease()
 	{
+		Debug.Log("Speed");
 		if (currentSpeed+speedIncreaseRate<=speedUpLimit)
 		{
 			currentSpeed += speedIncreaseRate;

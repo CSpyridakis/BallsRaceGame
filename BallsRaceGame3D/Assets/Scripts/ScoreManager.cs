@@ -25,8 +25,12 @@ public class ScoreManager : MonoBehaviour
 	
 	public void distanceUpdate(Transform pt)
 	{
+		
 		Vector3 dis = pt.position;
-		distanceBoard.text = (((int)(dis.z/10))*10).ToString();
+		int dista = (((int) ((dis.z + 61f) / 10)) * 10);
+		distanceBoard.text = dista.ToString();
+		if (dista % 1000 == 0)
+			scoreUpdate(1000);
 	}
 	
 	public void scoreUpdate(float acv)

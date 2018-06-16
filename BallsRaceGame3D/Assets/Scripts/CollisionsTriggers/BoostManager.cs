@@ -10,7 +10,9 @@ public class BoostManager : MonoBehaviour
         if (other.tag=="Player")
         {
             Debug.Log("Player hit Booster");
-            other.GetComponent<PlayerManager>().speedIncrease();
+            //other.GetComponent<PlayerManager>().speedIncrease();
+            other.GetComponent<BallMovementAlternative>().speedIncrease();
+            other.GetComponent<ScoreManager>().scoreUpdate(50);
             //TODO play music
         }
        

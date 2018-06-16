@@ -12,7 +12,7 @@ public class FloorManager : MonoBehaviour
 	public GameObject[] floorPrefabs;		//all available floors to spawn
 	public GameObject[] buildingsPrefabs;	//all available buildings to spawn
 	public int numActiveFloors = 10;
-
+	
 	public float spawnz = -61f;				//Current floor's spawn z position
 	private Transform pT;					//current GameObject Transform Component in order to move it's possition
 	private float floorL = 61f;				//Length of each floor
@@ -38,8 +38,9 @@ public class FloorManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		//Debug.Log("pt.position.z: "+pT.transform.position.z+"  spawzn: "+spawnz + " numActiveFloors: "+numActiveFloors + " floorL:"+floorL );
 		//Check if new floor needs to been spawned
-		if (pT.position.z - 70f>(spawnz-numActiveFloors*floorL))
+		if (pT.transform.position.z - 70f>(spawnz-numActiveFloors*floorL))
 		{
 			spawnBoth();
 			DeleteBoth();
@@ -98,7 +99,7 @@ public class FloorManager : MonoBehaviour
 	 */
 	private void DeleteBuilding()
 	{
-		Destroy(spawnedBuildings[0]);
+		Destroy(spawnedBuildings[0]);	 
 		spawnedBuildings.RemoveAt(0);
 	}
 	
@@ -111,18 +112,11 @@ public class FloorManager : MonoBehaviour
 		//In Case it is first floor or number of floors' ==0 return floor with id==0 (Basic Floor)
 		if (floorPrefabs.Length <= 1 || lastFloorI == 0)
 		{
-			Debug.Log("FirstFloor");
 			lastFloorI++;
 			return 0;
 		}
-
-		//While player is in the same floor wait
-		int rI = numOfFloorsPassed;
-		while (rI==numOfFloorsPassed)
-		{
-			rI = Random.Range(1, floorPrefabs.Length);
-		}
-		Debug.Log("SecondFloor");
+		//Select random floor != first
+		int rI= Random.Range(1, floorPrefabs.Length);
 		//Return index of new floor
 		return rI;
 	}
