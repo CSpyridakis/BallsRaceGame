@@ -11,10 +11,10 @@ public class ObstacleCollisionManager : MonoBehaviour
 		//Debug.Log("Obstacle");
 		if (other.collider.tag == "Player")
 		{
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
 			Debug.Log("Player hit Obstacle");
-			player.GetComponent<PlayerManager>().enabled=false;
+			other.collider.GetComponent<PlayerManager>().enabled=false;
 			//TODO play music
+			//TODO exit
 		}
 	}
 }

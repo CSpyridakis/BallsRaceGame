@@ -9,9 +9,8 @@ public class BoostManager : MonoBehaviour
         //Debug.Log("Booster");
         if (other.tag=="Player")
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
             Debug.Log("Player hit Booster");
-            player.GetComponent<PlayerManager>().speedIncrease();
+            other.GetComponent<PlayerManager>().speedIncrease();
             //TODO play music
         }
        
