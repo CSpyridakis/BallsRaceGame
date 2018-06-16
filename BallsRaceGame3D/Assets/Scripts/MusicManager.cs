@@ -11,19 +11,21 @@ public class MusicManager : MonoBehaviour
 
 	public MusicClip[] audioFiles;
 	// Use this for initialization
-	void Awake () {
+	void Awake ()
+	{
+		Start();
 		foreach (MusicClip o in audioFiles)
 		{
 			o.source = gameObject.AddComponent<AudioSource>();
 			o.source.clip = o.audiofile;
-			o.source.volume = soundVolume;
+			o.source.volume = o.volume;
 			o.source.loop = o.loop;
 		}
 	}
 
 	private void Start()
 	{
-		Play("Menu");
+		Play("MenuSound");
 	}
 	public void Click()
 	{
