@@ -37219,5 +37219,5 @@ MonoBehaviour:
   obstacleObjects:
   - {fileID: 1694015706142856, guid: d7a219a7d9e91aa4db8e2fbc5a1df694, type: 2}
   - {fileID: 1062532233317408, guid: 003b14c6581daa641a0a8a2b2e0d22ab, type: 2}
-  - {fileID: 1866610715025236, guid: c659c2aa0fc9f654287d28a9ed44811a, type: 2}
+  - {fileID: 1715340483985260, guid: c659c2aa0fc9f654287d28a9ed44811a, type: 2}
   difficultyLevel: 1

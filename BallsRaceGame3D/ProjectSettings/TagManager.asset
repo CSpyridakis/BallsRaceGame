@@ -8,6 +8,7 @@ TagManager:
   - FloorEndMiddleHex
   - Obstacle
   - Booster
+  - Enemy
   layers:
   - Default
   - TransparentFX

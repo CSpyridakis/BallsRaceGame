@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleCollisionManager : MonoBehaviour
 {
-
+	
 
 	private void OnCollisionEnter(Collision other)
 	{
@@ -12,12 +12,9 @@ public class ObstacleCollisionManager : MonoBehaviour
 		if (other.collider.tag == "Player")
 		{
 			Debug.Log("Player hit Obstacle");
-			other.collider.GetComponent<PlayerManager>().enabled=false;
-			other.collider.GetComponent<ScoreManager>().enabled=false;
-			other.collider.GetComponent<BallMovementAlternative>().enabled=false;
-			//TODO play music
-			//TODO exit
+			GameObject.FindObjectOfType<GameManage>().ExitGame();
 		}
+		
 	}
 }
 

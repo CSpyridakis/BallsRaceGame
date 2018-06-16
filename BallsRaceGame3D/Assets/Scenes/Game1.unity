@@ -209,6 +209,37 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d53b512b617e6a54db2d6f1ceabb5f33, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &756477080 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1376019254387958, guid: d53b512b617e6a54db2d6f1ceabb5f33,
+    type: 2}
+  m_PrefabInternal: {fileID: 670467192}
+--- !u!114 &756477083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756477080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a3539608825254ba1bc67b72f0d6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponentObject: {fileID: 1554237559800026, guid: a026d94f0dc76b244bec14b03c666349,
+    type: 2}
+  OpponentsNum: 10
+  StartingPoint: -61
+--- !u!114 &756477084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756477080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8746d4680ef39464188d19240a242238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1504572822
 Prefab:
   m_ObjectHideFlags: 0
@@ -258,6 +289,16 @@ Prefab:
       propertyPath: distanceBoard
       value: 
       objectReference: {fileID: 270596933}
+    - target: {fileID: 114166259475027702, guid: 7777daa36bafae947b421cf0c8aab229,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427015103131004, guid: 7777daa36bafae947b421cf0c8aab229,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7777daa36bafae947b421cf0c8aab229, type: 2}
   m_IsPrefabParent: 0

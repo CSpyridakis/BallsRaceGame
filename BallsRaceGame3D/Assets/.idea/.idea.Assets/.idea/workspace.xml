@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e018a7bb-3e08-4fd6-9840-86f3bf453c1a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/3D Objects/Basic/PlayerObjects.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3D Objects/Basic/PlayerObjects.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/0Bu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/0Bu/PlayerLCSPe.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/0Bu/PlayerLCSPe.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Basic/BasicHex.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Basic/BasicHex.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Basic/HexNC.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Basic/HexNC.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Boosters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Boosters/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Boosters/Basic/HexNCBoost.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Boosters/Basic/HexNCBoost.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Boosters/singleBooster.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Boosters/singleBooster.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/Basic/HexNC.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/Basic/HexNC.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/Building.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/Building.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/BuildingsGroup1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/BuildingsGroup1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/BuildingsGroup2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Buildings/BuildingsGroup2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/FlatFloor7H.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/FlatFloor7H.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/FlatFloor9HObjGen.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/FlatFloor9HObjGen.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/HexC.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/HexC.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/Row.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/Basic/Row.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9H.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9H.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9HObjGen.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9HObjGen.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9HObjGenF0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9HObjGenF0.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9HSpaces.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Floor/FlatFloor9HSpaces.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Basic/HexCOb.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Basic/HexCOb.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Obstacle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Obstacle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls/1xN.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls/1xN/1x1Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls/1xN/1x1Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls/2xN.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls/2xN/2x1Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Obstacles/Walls/2xN/2x1Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/Basic/PlayerObj.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/Basic/PlayerObj.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/PlayerLC.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/PlayerLC.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/PlayerLCSPe.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/3D Objects/Player/PlayerLCSPe.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/GameManagers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/GameManagers/SceneManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/GameManagers/SceneManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/GameManagers/SceneManager2Floors.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/GameManagers/SceneManager2Floors.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/Scripts/BallMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/Scripts/BallMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/Scripts/PCollider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD/Scripts/PCollider.cs.meta" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1557" />
+    <option name="y" value="-14" />
+    <option name="width" value="1294" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Assets" type="6f407253:SolutionExplorerNodeFileSystem" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Assets" type="6f407253:SolutionExplorerNodeFileSystem" />
+              <item name="Scripts" type="6f407253:SolutionExplorerNodeFileSystem" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e018a7bb-3e08-4fd6-9840-86f3bf453c1a" name="Default" comment="" />
+      <created>1529152666394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529152666394</updated>
+      <workItem from="1529152667951" duration="29000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2568" y="-8" width="2576" height="1056" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

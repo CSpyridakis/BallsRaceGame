@@ -15,6 +15,5 @@ public class BoostManager : MonoBehaviour
             other.GetComponent<ScoreManager>().scoreUpdate(50);
             //TODO play music
         }
-       
     }
 }

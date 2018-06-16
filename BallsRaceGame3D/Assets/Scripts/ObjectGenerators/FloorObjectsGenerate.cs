@@ -47,7 +47,7 @@ public class FloorObjectsGenerate : MonoBehaviour
 
 	private void createRandom(float spawnz)
 	{
-		if (Random.Range(0, 20) < 4)
+		if (Random.Range(0, 23) < 8)
 			spawnBooster(spawnz);
 	
 		else
@@ -74,7 +74,7 @@ public class FloorObjectsGenerate : MonoBehaviour
 		gO.transform.SetParent(transform);
 		Vector3 mv;
 		mv.z = spawnz;
-		mv.y = 1.0f;
+		mv.y = 1.5f;
 		mv.x = Random.Range(-1.75f,8.75f);
 		gO.transform.position= mv;
 		spawnedObjects.Add(gO);
