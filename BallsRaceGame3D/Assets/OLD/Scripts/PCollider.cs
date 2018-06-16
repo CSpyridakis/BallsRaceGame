@@ -5,23 +5,18 @@ using UnityEngine;
 public class PCollider : MonoBehaviour
 {
 
-	public BallMovement bM;
+	//public BallMovement bM;
 	
 	void Start () {
-		Debug.Log("Begin Ball Collider");
-	}
-	
-	void Update () {
-		
+		Debug.Log("Begin Booster Trigger");
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 
-		if (other.gameObject.CompareTag("Booster"))
+		if (other.gameObject.CompareTag("Player"))
 		{
-			bM.speedIncrease();
-			Debug.Log("Boost");
+			Debug.Log("Obstacle");
 		}  
 	}
 }

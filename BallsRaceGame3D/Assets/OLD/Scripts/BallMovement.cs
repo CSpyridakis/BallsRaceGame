@@ -25,7 +25,7 @@ public class BallMovement : MonoBehaviour
 	{
 	}
 
-	void FixedUpdate()
+	/*void FixedUpdate()
 	{
 		playerMovement();
 	}
@@ -58,6 +58,10 @@ public class BallMovement : MonoBehaviour
 		{
 			currentSpeed += speedIncreaseRate;
 		}
-	}
+	}*/
 
+	private void OnTriggerEnter(Collider other)
+	{
+		Debug.Log("In");
+	}
 }

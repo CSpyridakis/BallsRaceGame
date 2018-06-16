@@ -11,7 +11,8 @@ public class CameraManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log("Begin Camera Manager");
+		Debug.Log("Begin Camera Manager: OK");
+		offset = transform.position - pT.position;
 	}
 	
 	// Update is called once per frame

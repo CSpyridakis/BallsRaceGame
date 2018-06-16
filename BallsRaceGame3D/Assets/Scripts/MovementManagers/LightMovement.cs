@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class LightMovement : MonoBehaviour {
 
-	private Transform pT;
+	public Transform pT;
 	private Vector3 offset;
 	private Vector3 moveV;
 	
 	// Use this for initialization
 	void Start () {
-		//Find players object based on tag
-		pT = GameObject.FindGameObjectWithTag("Player").transform;
-		
-		//Create offset
+		Debug.Log("Begin Light Manager: OK");
 		offset = transform.position - pT.position;
 	}
 	
@@ -32,8 +29,8 @@ public class LightMovement : MonoBehaviour {
 		moveV = pT.position + offset;
 
 		//Fix light movements
-		moveV.x = -5;
-		moveV.y = 13;
+		moveV.x = -10;
+		moveV.y = 14;
 		
 		//Move light
 		transform.position = moveV;
