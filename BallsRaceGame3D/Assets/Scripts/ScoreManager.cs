@@ -22,7 +22,6 @@ public class ScoreManager : MonoBehaviour
 	void Update ()
 	{
 		PlayerPoss();
-		Debug.Log(score);
 		distanceUpdate(pT.transform);
 	}
 	

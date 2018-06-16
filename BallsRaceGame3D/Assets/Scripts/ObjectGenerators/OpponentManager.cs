@@ -9,7 +9,7 @@ public class OpponentManager : MonoBehaviour
 	public float StartingPoint = -61f;
 	
 	// Use this for initialization
-	void Start() {
+	void Awake() {
 		Debug.Log("Begin Opponents Manager: OK");
 		//Create N Opponents
 		float diss = 61f/OpponentsNum;

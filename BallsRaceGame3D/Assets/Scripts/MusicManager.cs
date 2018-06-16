@@ -1,16 +1,77 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
-public class MusicManager : MonoBehaviour {
+public class MusicManager : MonoBehaviour
+{
 
+	public float soundVolume;
+
+	public MusicClip[] audioFiles;
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+		foreach (MusicClip o in audioFiles)
+		{
+			o.source = gameObject.AddComponent<AudioSource>();
+			o.source.clip = o.audiofile;
+			o.source.volume = soundVolume;
+			o.source.loop = o.loop;
+		}
+	}
+
+	private void Start()
+	{
+		Play("Menu");
+	}
+	public void Click()
+	{
+		Play("Click");
+	}
+	public void Boost()
+	{
+		Play("Boost");
+	}	
+	public void Obstacle()
+	{
+		Play("Obstacle");
+	}
+
+	public void Play(string audioName)
+	{
+		foreach (var o in audioFiles)
+		{
+			if (o.AudioName.Equals(audioName))
+			{
+				o.source.Play();
+			}
+		}	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void Pause(string audioName)
+	{
+		foreach (var o in audioFiles)
+		{
+			if (o.AudioName.Equals(audioName))
+			{
+				o.source.Pause();
+			}
+		}	
 	}
+}
+
+
+
+[System.Serializable]
+public class MusicClip
+{
+	public String AudioName;
+	public AudioClip audiofile;
+	public float volume;
+	public bool loop;
+
+	[HideInInspector]
+	public AudioSource source;
+
 }

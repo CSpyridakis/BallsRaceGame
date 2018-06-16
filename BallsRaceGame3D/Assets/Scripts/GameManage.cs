@@ -9,6 +9,8 @@ public class GameManage : MonoBehaviour {
     public GameObject GameOver;
     public GameObject GameStatus;
     public GameObject GameMenu;
+
+    private bool first;
     // Use this for initialization
     void Start()
     {
@@ -19,9 +21,9 @@ public class GameManage : MonoBehaviour {
         GameStatus.active = false;
     }
     
-    
     public void PauseGame()
     {
+        bool fl = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().enabled=false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<ScoreManager>().enabled=false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<BallMovementAlternative>().enabled=false;
@@ -52,7 +54,6 @@ public class GameManage : MonoBehaviour {
     {
         PauseGame();
         //TODO PlayMusic
-        //TODO RESTART
     }
 
     public void RestartGame()
