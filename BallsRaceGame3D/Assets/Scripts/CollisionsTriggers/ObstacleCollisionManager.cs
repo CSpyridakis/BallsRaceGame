@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ObstacleCollisionManager : MonoBehaviour
 {
-	
-
 	private void OnCollisionEnter(Collision other)
 	{
-		//Debug.Log("Obstacle");
 		if (other.collider.tag == "Player")
 		{
-			GameObject.FindObjectOfType<MusicManager>().Play("Obstacle");
 			//Debug.Log("Player hit Obstacle");
+			GameObject.FindObjectOfType<MusicManager>().Play("Obstacle");
 			Invoke("Exit",0.3f);
 		}
 		

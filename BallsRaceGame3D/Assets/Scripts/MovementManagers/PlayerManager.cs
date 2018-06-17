@@ -13,7 +13,6 @@ public class PlayerManager : MonoBehaviour
 	public Rigidbody prB;
 	private Vector3 moveV;
 
-	// Use this for initialization
 	void Start ()
 	{
 		currentSpeed = speedDownLimit;
@@ -30,7 +29,9 @@ public class PlayerManager : MonoBehaviour
 		prB.AddForce(leftRightspeed*Input.GetAxisRaw("Horizontal")*Time.deltaTime,0,currentSpeed*Time.deltaTime);
 	}
 
-
+	/*
+	 * @brief Spawn new Floor
+	 */
 	public void speedIncrease()
 	{
 		Debug.Log("Speed");

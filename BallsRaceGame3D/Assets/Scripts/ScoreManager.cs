@@ -14,34 +14,46 @@ public class ScoreManager : MonoBehaviour
 	public Transform pT;
 
 	private float score=0.0f;
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
+
+	/*
+	 * @brief Each frame update score, distance and position
+	 */
 	void Update ()
 	{
+		scoreUpdate(1);
 		PlayerPoss();
 		distanceUpdate(pT.transform);
 	}
 	
+	/*
+	 * @brief Update player's distance in GameInfo Panel
+	 *
+	 * @param (Transform) pt PlayersTransform based on is calculating distance that player has traveled so far
+	 */
 	public void distanceUpdate(Transform pt)
 	{
-		
 		Vector3 dis = pt.position;
 		int dista = (((int) ((dis.z + 61f) / 10)) * 10);
 		distanceBoard.text = dista.ToString();
-		if (dista % 100 == 0)
-			scoreUpdate(1000);
+		if ((dis.z + 61f)%100 == 0)
+			scoreUpdate(100);
 	}
 	
-	public void scoreUpdate(float acv)
+	/*
+	 * @brief Update score in both GameInfo Panel and GameOver Panel
+	 *
+	 * @param (float) sta Score To Add in scoreboards
+	 */
+	public void scoreUpdate(float sta)
 	{
-		score+=acv;
+		score+=sta;
 		scoreBoard.text = ((int)score).ToString();
 		GameOverScore.text= ((int)score).ToString();
 	}
-
+	
+	/*
+	 * @brief Find out current player's position and update GameInfo Panel
+	 */
 	private void PlayerPoss()
 	{
 		float playerZ = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position.z;

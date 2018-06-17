@@ -6,14 +6,12 @@ public class BoostManager : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Booster");
         if (other.tag=="Player")
         {
-            GameObject.FindObjectOfType<MusicManager>().Play("Boost");
             //Debug.Log("Player hit Booster");
-            //other.GetComponent<PlayerManager>().speedIncrease();
+            GameObject.FindObjectOfType<MusicManager>().Play("Boost");
             other.GetComponent<BallMovementAlternative>().speedIncrease();
-            other.GetComponent<ScoreManager>().scoreUpdate(50);
+            other.GetComponent<ScoreManager>().scoreUpdate(150);
         }
     }
 }

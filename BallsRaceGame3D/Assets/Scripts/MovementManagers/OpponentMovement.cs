@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * @brief Control movement foreach opponent
+ */
 public class OpponentMovement : MonoBehaviour {
 
 	public float currentSpeed=11.0f;
@@ -11,7 +14,6 @@ public class OpponentMovement : MonoBehaviour {
 
 	private Vector3 moveV;
 
-	// Use this for initialization
 	void Start ()
 	{
 		//Debug.Log("Begin Ball Movement: OK");
@@ -21,8 +23,16 @@ public class OpponentMovement : MonoBehaviour {
 	void FixedUpdate()
 	{
 		playerMovement();
+
+		if (transform.position.y<-100)
+		{
+			Destroy(gameObject);
+		}
 	}
 	
+	/*
+	* @brief Move Oppoment position
+	*/
 	void playerMovement()
 	{
 		moveV =Vector3.zero;
@@ -37,6 +47,9 @@ public class OpponentMovement : MonoBehaviour {
 		transform.Translate(moveV.x,0,moveV.z);
 	}
 	
+	/*
+	 * @brief When opponent triggered with a Booster increase his speed
+	 */
 	public void speedIncrease()
 	{
 		if (currentSpeed+speedIncreaseRate<=speedUpLimit)
@@ -45,12 +58,18 @@ public class OpponentMovement : MonoBehaviour {
 		}
 	}
 	
+	/*
+	 * @brief Find Obstacles position and move opponent left or right in order to avoid them  
+	 */
 	public float leftRightMovement()
 	{
 		//TODO CHANGE BASED ON OBSTACLES
 		return 0.0f;
 	}
 	
+	/*
+	 * @brief If opponent triggered with Booster or Obstacle act properly
+	 */
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.tag=="Booster")

@@ -4,13 +4,17 @@ using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
 
+/*
+ * @brief Manipulates all Game Sounds and Background Music
+ */
 public class MusicManager : MonoBehaviour
 {
 
-	public float soundVolume;
-
 	public MusicClip[] audioFiles;
-	// Use this for initialization
+	
+	/*
+	 * @brief Create Audio Sources foreach Audio File in order to Play them
+	 */
 	void Awake ()
 	{
 		foreach (MusicClip o in audioFiles)
@@ -22,24 +26,43 @@ public class MusicManager : MonoBehaviour
 		}
 	}
 	
-	
+	/*
+	 * @brief Play Menu Background Audio File (Loop = true)
+	 */
 	private void Start()
 	{
 		Play("MenuSound");
 	}
+	
+	/*
+	 * @brief On Click Play Click sound effect ONLY ONCE PER TIME (Loop = false)
+	 */
 	public void Click()
 	{
 		Play("Click");
 	}
+	
+	/*
+	 * @brief If player triggered a Boost call this in order to play Boost sound effect ONLY ONCE PER TIME (Loop = false)
+	 */
 	public void Boost()
 	{
 		Play("Boost");
-	}	
+	}
+	
+	/*
+	 * @brief If player collided with an Obstacle call this in order to play Obstacle sound effect ONLY ONCE PER TIME (Loop = false)
+	 */
 	public void Obstacle()
 	{
 		Play("Obstacle");
 	}
 
+	/*
+	 * @brief Play a specific File Source with a specific Name
+	 *
+	 * @param audioName Name of the desired Audio Source
+	 */
 	public void Play(string audioName)
 	{
 		foreach (var o in audioFiles)
@@ -52,7 +75,7 @@ public class MusicManager : MonoBehaviour
 				}
 				else
 				{
-					o.source.volume = 0.7f;
+					o.source.volume = 1f;
 				}
 				o.source.Play();
 			}
@@ -60,6 +83,11 @@ public class MusicManager : MonoBehaviour
 
 	}
 	
+	/*
+	 * @brief Pause a specific File Source with a specific Name
+	 *
+	 * @param audioName Name of the desired Audio Source
+	 */
 	public void Pause(string audioName)
 	{
 		foreach (var o in audioFiles)
@@ -72,8 +100,9 @@ public class MusicManager : MonoBehaviour
 	}
 }
 
-
-
+/*
+ * @brief Needed Class in order to Create Audio Sources
+ */
 [System.Serializable]
 public class MusicClip
 {

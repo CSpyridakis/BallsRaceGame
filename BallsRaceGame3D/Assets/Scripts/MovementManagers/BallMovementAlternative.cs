@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * @brief Control Player's movement
+ */
 public class BallMovementAlternative : MonoBehaviour
 {
     
@@ -14,27 +17,24 @@ public class BallMovementAlternative : MonoBehaviour
 
 	private Vector3 moveV;
 
-	// Use this for initialization
-	void Start ()
-	{
-		//Debug.Log("Begin Ball Movement: OK");
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	}
-
 	void FixedUpdate()
 	{
 		playerMovement();
+		
+		if (transform.position.y<-10)
+		{
+			GameObject.FindObjectOfType<GameManage>().ExitGame();
+		}
 	}
 	
+	/*
+	 * @brief Change player's position
+	 */
 	void playerMovement()
 	{
 		moveV =Vector3.zero;
 
-		//Left Right Modement
+		//Left Right Movement
 		moveV.x = (Input.GetAxisRaw("Horizontal")*leftRightspeed)*Time.deltaTime;
 
 		//Forward Movement
@@ -51,7 +51,10 @@ public class BallMovementAlternative : MonoBehaviour
 			currentSpeed -= speedDecreaseRate;
 		}
 	}
-
+	
+	/*
+	 * @brief When player triggered an Booster increase his speed
+	 */
 	public void speedIncrease()
 	{
 		if (currentSpeed+speedIncreaseRate<=speedUpLimit)

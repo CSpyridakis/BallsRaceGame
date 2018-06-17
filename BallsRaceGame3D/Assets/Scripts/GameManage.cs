@@ -5,14 +5,17 @@ using UnityEngine.Analytics;
 using UnityEngine.Experimental.UIElements;
 
 public class GameManage : MonoBehaviour {
-    public int gameDifficulty=0;
+    public int gameDifficulty=1;
 
     public GameObject GameOver;
     public GameObject GameStatus;
     public GameObject GameMenu;
 
     private bool first;
-    // Use this for initialization
+
+    /*
+     * @brief On start Pause player's and opponents' movement and show up GameMenu
+     */
     void Start()
     {
         //Debug.Log("Begin Game Manage: OK");
@@ -22,12 +25,9 @@ public class GameManage : MonoBehaviour {
         GameStatus.active = false;
     }
 
-    private void Update()
-    {
-        //gameDifficulty = ;
-        gameDifficulty++;
-    }
-
+    /*
+     * @brief Pause Player's and opponents' movement and show up GameOver
+     */
     public void PauseGame()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().enabled=false;
@@ -42,6 +42,9 @@ public class GameManage : MonoBehaviour {
         GameStatus.active = false;
     }
 
+    /*
+     * @brief Start Player's and opponents movement and show up GameStatus
+     */
     public void PlayGame()
     {
         //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().enabled=true;
@@ -56,16 +59,25 @@ public class GameManage : MonoBehaviour {
         GameStatus.active = true;
     }
 
+    /*
+     * @brief Call it whenever Exit needed
+     */
     public void ExitGame()
     {
         PauseGame();
-        //TODO PlayMusic
     }
 
+    /*
+     * @brief Restart Game in current scene
+     */
     public void RestartGame()
     {
         Application.LoadLevel(Application.loadedLevel);
     }
+    
+    /*
+    * @brief Quit game only when build
+    */
     public void QuitGame()
     {
         Debug.Log("Quit");

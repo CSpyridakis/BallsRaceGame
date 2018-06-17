@@ -21,11 +21,9 @@ public class FloorManager : MonoBehaviour
 	private int lastFloorI = 0;				//Id of last spawned floor
 	private int numOfFloorsPassed = 0;		//Number of floors gone through
 	
-	// Use this for initialization
 	void Start()
 	{
 		//Debug.Log("Begin Floor Manager: OK");
-		//pT = playersTransform
 		pT = GameObject.FindGameObjectWithTag("Player").transform;
 		
 		//Create first N floors
@@ -33,12 +31,10 @@ public class FloorManager : MonoBehaviour
 		{
 			spawnBoth();
 		}
-
 	}
-	// Update is called once per frame
+	
 	void Update()
 	{
-		//Debug.Log("pt.position.z: "+pT.transform.position.z+"  spawzn: "+spawnz + " numActiveFloors: "+numActiveFloors + " floorL:"+floorL );
 		//Check if new floor needs to been spawned
 		if (pT.transform.position.z - 70f>(spawnz-numActiveFloors*floorL))
 		{
@@ -48,12 +44,16 @@ public class FloorManager : MonoBehaviour
 
 	}
 
+	/*
+	 * @brief Spawn Both new Building and Floor
+	 */
 	private void spawnBoth()
 	{
 		spawnFloor();
 		spawnBuildings();
 		spawnz += floorL;
 	}
+	
 	/*
 	 * @brief Spawn new Floor
 	 */
@@ -103,20 +103,20 @@ public class FloorManager : MonoBehaviour
 		spawnedBuildings.RemoveAt(0);
 	}
 	
-	
 	/*
 	 * @brief Select id of new floor
 	 */
 	private int nextFloorRandomPre()
 	{
-		//In Case it is first floor or number of floors' ==0 return floor with id==0 (Basic Floor)
-		if (floorPrefabs.Length <= 1 || lastFloorI == 0)
+		//In Case it is first two floors or number of floors ==0 return floor with id==0 (Basic Floor)
+		if (floorPrefabs.Length <= 1 || lastFloorI <2)
 		{
 			lastFloorI++;
 			return 0;
 		}
 		//Select random floor != first
 		int rI= Random.Range(1, floorPrefabs.Length);
+		
 		//Return index of new floor
 		return rI;
 	}

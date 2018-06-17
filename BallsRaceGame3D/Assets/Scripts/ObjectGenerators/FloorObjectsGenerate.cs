@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * @brief Spawn random Obstacles or Boost points in each Floor
+ */
 public class FloorObjectsGenerate : MonoBehaviour
 {
 
@@ -10,7 +13,9 @@ public class FloorObjectsGenerate : MonoBehaviour
 	public int difficultyLevel = 1;
 	private List<GameObject> spawnedObjects =new List<GameObject>();
 	
-	// Use this for initialization
+	/*
+	 * @brief Spawn objects based on level difficulty
+	 */
 	void Start ()
 	{
 		difficultyLevel = GameObject.FindObjectOfType<GameManage>().gameDifficulty;
@@ -23,7 +28,7 @@ public class FloorObjectsGenerate : MonoBehaviour
 			createRandom(pos + 40f);
 			createRandom(pos + 60f);
 		}
-		else if (difficultyLevel == 1)
+		else if (difficultyLevel == 2)
 		{
 			createRandom(pos + 15f);
 			createRandom(pos + 30f);
@@ -40,12 +45,10 @@ public class FloorObjectsGenerate : MonoBehaviour
 			createRandom(pos + 60f);
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+	/*
+	 * @brief Spawn Boost with a probability of 0.333 else spawn Obstacle
+	 */
 	private void createRandom(float spawnz)
 	{
 		if (Random.Range(0, 23) < 8)
@@ -55,6 +58,11 @@ public class FloorObjectsGenerate : MonoBehaviour
 			spawnObstacle(spawnz);
 	}
 	
+	/*
+	 * @brief Spawn Boost in specific position
+	 *
+	 * @param (float) spawnz z position where to spawn Booster
+	 */
 	private void spawnBooster(float spawnz)
 	{
 		GameObject gO;
@@ -68,6 +76,11 @@ public class FloorObjectsGenerate : MonoBehaviour
 		spawnedObjects.Add(gO);
 	}
 
+	/*
+	 * @brief Spawn Obstacle in specific position
+	 *
+	 * @param (float) spawnz z position where to spawn Obstacle
+	 */
 	private void spawnObstacle(float spawnz)
 	{
 		GameObject gO;
