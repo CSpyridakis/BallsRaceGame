@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    
 	public float speedDownLimit=5;
 	public float speedUpLimit=70.0f;
 	public float currentSpeed;

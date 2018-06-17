@@ -9,20 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1250529598378606}
+  m_RootGameObject: {fileID: 1946490007581224}
   m_IsPrefabParent: 1
---- !u!1 &1250529598378606
+--- !u!1 &1946490007581224
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4222797842364842}
-  - component: {fileID: 114280874003221242}
-  - component: {fileID: 114128057364575970}
-  - component: {fileID: 114947810924143316}
-  - component: {fileID: 114869769356460364}
+  - component: {fileID: 4159838740223812}
+  - component: {fileID: 114478858590976088}
+  - component: {fileID: 114218701986214738}
+  - component: {fileID: 114483126687453354}
+  - component: {fileID: 114461494908651424}
+  - component: {fileID: 82053646717485782}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30,12 +31,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4222797842364842
+--- !u!4 &4159838740223812
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250529598378606}
+  m_GameObject: {fileID: 1946490007581224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 192.61469, y: 189.30716, z: 895.7288}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,12 +44,107 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114128057364575970
+--- !u!82 &82053646717485782
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946490007581224}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9c16ca6279724124dac0bf72a5ca8a7f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 91
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &114218701986214738
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250529598378606}
+  m_GameObject: {fileID: 1946490007581224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a3539608825254ba1bc67b72f0d6ee, type: 3}
@@ -59,35 +155,12 @@ MonoBehaviour:
   OpponentsNum: 10
   multyplier: 3
   StartingPoint: -61
---- !u!114 &114280874003221242
+--- !u!114 &114461494908651424
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250529598378606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2880d3c253d46e44182760bcba4a59a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floorPrefabs:
-  - {fileID: 1282556037332900, guid: ef07320460256b341827019a1fdc9025, type: 2}
-  - {fileID: 1475819616230266, guid: 8fea0e66dc34e424b8c5038376822b60, type: 2}
-  - {fileID: 1747838689037622, guid: 284688e0c2deb6e4eaa3795c07c9df46, type: 2}
-  - {fileID: 1562623715695592, guid: 9067731dc91a8924f87512c7410d2f9a, type: 2}
-  - {fileID: 1478195685009066, guid: 2db4de4e9c1c80842a7c2c5eadedc998, type: 2}
-  buildingsPrefabs:
-  - {fileID: 1474322535335352, guid: 727d004128785d848b6e43dd2f8f31d8, type: 2}
-  - {fileID: 1646011388440164, guid: 4cc6695ababf29641aa93def1a01461c, type: 2}
-  - {fileID: 1079394795986072, guid: 2d5072b42ce29654da5af01e8178a369, type: 2}
-  numActiveFloors: 10
-  spawnz: -61
---- !u!114 &114869769356460364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250529598378606}
+  m_GameObject: {fileID: 1946490007581224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b016ba1d444082744b9b19410666ea23, type: 3}
@@ -109,17 +182,35 @@ MonoBehaviour:
     volume: 70
     loop: 0
     source: {fileID: 0}
-  - AudioName: MenuSound
-    audiofile: {fileID: 8300000, guid: 9c16ca6279724124dac0bf72a5ca8a7f, type: 3}
-    volume: 0.5
-    loop: 1
-    source: {fileID: 0}
---- !u!114 &114947810924143316
+--- !u!114 &114478858590976088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250529598378606}
+  m_GameObject: {fileID: 1946490007581224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2880d3c253d46e44182760bcba4a59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorPrefabs:
+  - {fileID: 1282556037332900, guid: ef07320460256b341827019a1fdc9025, type: 2}
+  - {fileID: 1475819616230266, guid: 8fea0e66dc34e424b8c5038376822b60, type: 2}
+  - {fileID: 1747838689037622, guid: 284688e0c2deb6e4eaa3795c07c9df46, type: 2}
+  - {fileID: 1562623715695592, guid: 9067731dc91a8924f87512c7410d2f9a, type: 2}
+  - {fileID: 1478195685009066, guid: 2db4de4e9c1c80842a7c2c5eadedc998, type: 2}
+  buildingsPrefabs:
+  - {fileID: 1474322535335352, guid: 727d004128785d848b6e43dd2f8f31d8, type: 2}
+  - {fileID: 1646011388440164, guid: 4cc6695ababf29641aa93def1a01461c, type: 2}
+  - {fileID: 1079394795986072, guid: 2d5072b42ce29654da5af01e8178a369, type: 2}
+  numActiveFloors: 10
+  spawnz: -61
+--- !u!114 &114483126687453354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946490007581224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8746d4680ef39464188d19240a242238, type: 3}

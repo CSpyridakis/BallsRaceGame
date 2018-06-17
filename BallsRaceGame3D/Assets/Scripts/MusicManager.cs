@@ -23,6 +23,7 @@ public class MusicManager : MonoBehaviour
 			o.source.clip = o.audiofile;
 			o.source.volume = o.volume;
 			o.source.loop = o.loop;
+			o.source.playOnAwake=false;
 		}
 	}
 	
@@ -71,13 +72,15 @@ public class MusicManager : MonoBehaviour
 			{
 				if (o.AudioName.Equals("MenuSound"))
 				{
-					o.source.volume = 0.001f;
+					o.source.volume = 0.01f;
+					o.source.loop = true;
+					o.source.Play();
 				}
 				else
 				{
 					o.source.volume = 1f;
+					o.source.Play();
 				}
-				o.source.Play();
 			}
 		}
 

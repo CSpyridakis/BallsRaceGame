@@ -10,7 +10,7 @@ public class ObstacleCollisionManager : MonoBehaviour
 		{
 			//Debug.Log("Player hit Obstacle");
 			GameObject.FindObjectOfType<MusicManager>().Play("Obstacle");
-			Invoke("Exit",0.3f);
+			Invoke("Exit",0.1f);
 		}
 		
 	}
