@@ -115,7 +115,9 @@ MonoBehaviour:
   currentSpeed: 11
   speedIncreaseRate: 1
   speedUpLimit: 70
-  leftRightspeed: 14
+  leftRightspeed: 20
+  checkDistance: 50
+  offsetCheck: 0.53
 --- !u!135 &135594829550468430
 SphereCollider:
   m_ObjectHideFlags: 1

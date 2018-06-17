@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,7 +13,9 @@ public class OpponentMovement : MonoBehaviour {
 	public float currentSpeed=11.0f;
 	public float speedIncreaseRate = 1.0f;
 	public float speedUpLimit = 70.0f;
-	public float leftRightspeed=10.0f;
+	public float leftRightspeed=20.0f;
+	public float checkDistance = 20.0f;
+	public float offsetCheck = 0.53f;
 
 	private Vector3 moveV;
 	private int lastob =0;
@@ -66,52 +69,101 @@ public class OpponentMovement : MonoBehaviour {
 	public float leftRightMovement()
 	{
 		RaycastHit hit;
-		RaycastHit right;
-		RaycastHit left;
+		Vector3 leftCheck = transform.position;
+		leftCheck.x = leftCheck.x-offsetCheck;
+		Vector3 rightCheck = transform.position;
+		rightCheck.x = rightCheck.x+offsetCheck;
 
-		if (Physics.Raycast(transform.position, transform.forward, out hit))
+		Debug.DrawRay(leftCheck, transform.forward,Color.yellow);
+		Debug.DrawRay(transform.position, transform.forward,Color.green);
+		Debug.DrawRay(rightCheck, transform.forward,Color.blue);
+		
+		//Left collision Check
+		if (Physics.Raycast(leftCheck, transform.forward, out hit))
 		{
-			if (hit.distance<20.0f)
+			if (hit.distance<checkDistance)
 			{
-				Physics.Raycast(transform.position, Vector3.right, out right);
-				Physics.Raycast(transform.position, Vector3.left, out left);
-				if (Math.Abs(right.distance-left.distance)<1 && lastob==0)
-				{
-					lastob = Random.Range(0, 1) == 0 ? -1 : 1;
-				}
-				else if(left.distance<right.distance && lastob==0)
-				{
-					lastob = 1;
-				}
-				else if(lastob==0)
-				{
-					lastob = -1;
-				}
+				lastob = 1;
+				//Fix Direction in case of Error
 				if(transform.position.x<-1.2f)
 					lastob = 1;
 				else if (transform.position.x>8.4f)
 					lastob = -1;
-				
-				return lastob*leftRightspeed;
+				return lastob*leftRightSpeed(hit.distance);
 			}
 		}
-		else if (Physics.Raycast(transform.position, transform.forward*Mathf.Sin(+30), out hit))
+		//Right collision Check
+		else if (Physics.Raycast(rightCheck, transform.forward, out hit))
 		{
-			if (hit.distance < 10.0f)
+			if (hit.distance<checkDistance)
 			{
 				lastob = -1;
+				//Fix Direction in case of Error
+				if(transform.position.x<-1.2f)
+					lastob = 1;
+				else if (transform.position.x>8.4f)
+					lastob = -1;
+				return lastob*leftRightSpeed(hit.distance);
 			}
 		}
-		else if (Physics.Raycast(transform.position, transform.forward*Mathf.Sin(-30), out hit))
+		//Middle Collision Check
+		else if (Physics.Raycast(transform.position, transform.forward, out hit))
 		{
-			if (hit.distance < 10.0f)
+			if (hit.distance<checkDistance)
 			{
-				lastob = 1;
+				findDirection();
+				return lastob*leftRightSpeed(hit.distance);
 			}
 		}
-		
+		//No Collision
+		else
+		{
+			lastob = 0;
+		}
 		
 		return 0.0f;
+	}
+	/*
+	 * @brief Find opponents speed based on his distance until obstacle
+	 *
+	 * @param (float) distance , Distance of collision 
+	 */
+	private float leftRightSpeed(float distance)
+	{
+		return leftRightspeed / distance;
+	}
+		
+	/*
+	 * @brief Find if opponent has to move left or right
+	 */
+	private void findDirection()
+	{
+		RaycastHit right;
+		RaycastHit left;
+		Physics.Raycast(transform.position, Vector3.right, out right);
+		Physics.Raycast(transform.position, Vector3.left, out left);
+		
+		//Middle Case
+		if (Math.Abs(right.distance-left.distance)<0.5f && lastob==0)
+		{
+			lastob = Random.Range(0, 1) == 0 ? -1 : 1;
+		}
+		//Move right case
+		else if(left.distance<right.distance && lastob==0)
+		{
+			lastob = 1;
+		}
+		//Move left case
+		else if(lastob==0)
+		{
+			lastob = -1;
+		}
+		
+		//Fix Direction in case of Error
+		if(transform.position.x<-1.2f)
+			lastob = 1;
+		else if (transform.position.x>8.4f)
+			lastob = -1;
 	}
 	
 	/*
