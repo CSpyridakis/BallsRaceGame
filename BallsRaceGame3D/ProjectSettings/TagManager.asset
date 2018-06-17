@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Booster
   - Enemy
+  - Floor
   layers:
   - Default
   - TransparentFX

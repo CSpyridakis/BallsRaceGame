@@ -4193,7 +4193,7 @@ GameObject:
   - component: {fileID: 114278274623028914}
   m_Layer: 0
   m_Name: FloorWithSingleWall
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

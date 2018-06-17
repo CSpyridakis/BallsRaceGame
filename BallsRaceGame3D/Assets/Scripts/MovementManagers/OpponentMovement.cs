@@ -68,52 +68,39 @@ public class OpponentMovement : MonoBehaviour {
 	 */
 	public float leftRightMovement()
 	{
-		RaycastHit hit;
+		RaycastHit hitForward;
+		RaycastHit hitLeft;
+		RaycastHit hitRight;
 		Vector3 leftCheck = transform.position;
 		leftCheck.x = leftCheck.x-offsetCheck;
 		Vector3 rightCheck = transform.position;
 		rightCheck.x = rightCheck.x+offsetCheck;
 
-		Debug.DrawRay(leftCheck, transform.forward,Color.yellow);
-		Debug.DrawRay(transform.position, transform.forward,Color.green);
-		Debug.DrawRay(rightCheck, transform.forward,Color.blue);
-		
-		//Left collision Check
-		if (Physics.Raycast(leftCheck, transform.forward, out hit))
+		//Collisions Check and Visual show up
+		//Debug.DrawRay(leftCheck, transform.forward,Color.yellow);
+		//Debug.DrawRay(transform.position, transform.forward,Color.green);
+		//Debug.DrawRay(rightCheck, transform.forward,Color.blue);
+		Physics.Raycast(leftCheck, transform.forward, out hitForward);
+		Physics.Raycast(rightCheck, transform.forward, out hitLeft);
+		Physics.Raycast(transform.position, transform.forward, out hitRight);
+
+		//Forward Collision
+		if ((hitForward.distance<hitLeft.distance) && (hitForward.distance<hitRight.distance) && (hitForward.distance<checkDistance))
 		{
-			if (hit.distance<checkDistance)
-			{
-				lastob = 1;
-				//Fix Direction in case of Error
-				if(transform.position.x<-1.2f)
-					lastob = 1;
-				else if (transform.position.x>8.4f)
-					lastob = -1;
-				return lastob*leftRightSpeed(hit.distance);
-			}
+			findDirection();
+			return lastob*leftRightSpeed(hitForward.distance, transform.position.x);
 		}
-		//Right collision Check
-		else if (Physics.Raycast(rightCheck, transform.forward, out hit))
+		//Left Collision
+		else if ((hitLeft.distance < hitForward.distance) && (hitLeft.distance < hitRight.distance) && (hitLeft.distance < checkDistance))
 		{
-			if (hit.distance<checkDistance)
-			{
-				lastob = -1;
-				//Fix Direction in case of Error
-				if(transform.position.x<-1.2f)
-					lastob = 1;
-				else if (transform.position.x>8.4f)
-					lastob = -1;
-				return lastob*leftRightSpeed(hit.distance);
-			}
+			findDirection();
+			return lastob*leftRightSpeed(hitLeft.distance, transform.position.x);
 		}
-		//Middle Collision Check
-		else if (Physics.Raycast(transform.position, transform.forward, out hit))
+		//Right Collision
+		else if ((hitRight.distance < hitForward.distance) && (hitRight.distance < hitLeft.distance) && (hitRight.distance < checkDistance))
 		{
-			if (hit.distance<checkDistance)
-			{
-				findDirection();
-				return lastob*leftRightSpeed(hit.distance);
-			}
+			findDirection();
+			return lastob*leftRightSpeed(hitRight.distance, transform.position.x);
 		}
 		//No Collision
 		else
@@ -126,11 +113,34 @@ public class OpponentMovement : MonoBehaviour {
 	/*
 	 * @brief Find opponents speed based on his distance until obstacle
 	 *
-	 * @param (float) distance , Distance of collision 
+	 * @param (float) distance , Distance of collision
+	 * @param (float) x, current players position
 	 */
-	private float leftRightSpeed(float distance)
+	private float leftRightSpeed(float distance, float x)
 	{
-		return leftRightspeed / distance;
+		float lr = 4f;
+		GameObject fl = GameObject.FindGameObjectWithTag("Floor");
+		float leftFloorPoss=fl.transform.position.x-lr;
+		float rightFloorPoss = fl.transform.position.x + lr;
+		//Opponent out in scene
+		if (x > leftFloorPoss && x < rightFloorPoss)
+		{
+			if (distance > checkDistance)
+			{
+				return 0.1f;
+			}
+			else if (distance == 0.0f)
+			{
+				return leftRightspeed;
+			}
+
+			return leftRightspeed / distance;
+		}
+		//Opponent out off scene
+		else
+		{
+			return leftRightspeed * 2;
+		}
 	}
 		
 	/*
@@ -158,11 +168,15 @@ public class OpponentMovement : MonoBehaviour {
 		{
 			lastob = -1;
 		}
+		float lr = 4f;
+		GameObject fl = GameObject.FindGameObjectWithTag("Floor");
+		float leftFloorPoss=fl.transform.position.x-lr;
+		float rightFloorPoss = fl.transform.position.x + lr;
 		
 		//Fix Direction in case of Error
-		if(transform.position.x<-1.2f)
+		if(transform.position.x<leftFloorPoss)
 			lastob = 1;
-		else if (transform.position.x>8.4f)
+		else if (transform.position.x>rightFloorPoss)
 			lastob = -1;
 	}
 	
