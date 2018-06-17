@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1469244614395588}
+  m_RootGameObject: {fileID: 1250529598378606}
   m_IsPrefabParent: 1
---- !u!1 &1469244614395588
+--- !u!1 &1250529598378606
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4135499331987940}
-  - component: {fileID: 114798337117681020}
-  - component: {fileID: 114019989225351814}
-  - component: {fileID: 114246771144567572}
-  - component: {fileID: 114965549973586818}
+  - component: {fileID: 4222797842364842}
+  - component: {fileID: 114280874003221242}
+  - component: {fileID: 114128057364575970}
+  - component: {fileID: 114947810924143316}
+  - component: {fileID: 114869769356460364}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30,12 +30,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4135499331987940
+--- !u!4 &4222797842364842
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469244614395588}
+  m_GameObject: {fileID: 1250529598378606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 192.61469, y: 189.30716, z: 895.7288}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,12 +43,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114019989225351814
+--- !u!114 &114128057364575970
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469244614395588}
+  m_GameObject: {fileID: 1250529598378606}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a3539608825254ba1bc67b72f0d6ee, type: 3}
@@ -57,28 +57,14 @@ MonoBehaviour:
   opponentObject: {fileID: 1554237559800026, guid: a026d94f0dc76b244bec14b03c666349,
     type: 2}
   OpponentsNum: 10
+  multyplier: 3
   StartingPoint: -61
---- !u!114 &114246771144567572
+--- !u!114 &114280874003221242
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469244614395588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8746d4680ef39464188d19240a242238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameDifficulty: 2
-  GameOver: {fileID: 0}
-  GameStatus: {fileID: 0}
-  GameMenu: {fileID: 0}
---- !u!114 &114798337117681020
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469244614395588}
+  m_GameObject: {fileID: 1250529598378606}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2880d3c253d46e44182760bcba4a59a7, type: 3}
@@ -96,18 +82,17 @@ MonoBehaviour:
   - {fileID: 1079394795986072, guid: 2d5072b42ce29654da5af01e8178a369, type: 2}
   numActiveFloors: 10
   spawnz: -61
---- !u!114 &114965549973586818
+--- !u!114 &114869769356460364
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469244614395588}
+  m_GameObject: {fileID: 1250529598378606}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b016ba1d444082744b9b19410666ea23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundVolume: 0
   audioFiles:
   - AudioName: Click
     audiofile: {fileID: 8300000, guid: d2910964a64a6bd4ab40d9013615726f, type: 3}
@@ -120,7 +105,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - AudioName: Obstacle
-    audiofile: {fileID: 8300000, guid: b7d063feae757c940b392e8a19efb086, type: 3}
+    audiofile: {fileID: 8300000, guid: 60f07e4c2c495d044979a792ee8d8178, type: 3}
     volume: 70
     loop: 0
     source: {fileID: 0}
@@ -129,3 +114,18 @@ MonoBehaviour:
     volume: 0.5
     loop: 1
     source: {fileID: 0}
+--- !u!114 &114947810924143316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250529598378606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8746d4680ef39464188d19240a242238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameDifficulty: 2
+  GameOver: {fileID: 0}
+  GameStatus: {fileID: 0}
+  GameMenu: {fileID: 0}

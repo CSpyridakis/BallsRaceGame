@@ -30,7 +30,6 @@ public class GameManage : MonoBehaviour {
      */
     public void PauseGame()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().enabled=false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<ScoreManager>().enabled=false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<BallMovementAlternative>().enabled=false;
         foreach (var o in GameObject.FindGameObjectsWithTag("Enemy"))
@@ -47,7 +46,6 @@ public class GameManage : MonoBehaviour {
      */
     public void PlayGame()
     {
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().enabled=true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<ScoreManager>().enabled=true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<BallMovementAlternative>().enabled=true;
         foreach (var o in GameObject.FindGameObjectsWithTag("Enemy"))

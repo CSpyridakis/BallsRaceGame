@@ -101,7 +101,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &64292570830503860
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -145,4 +145,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f49271f155b11458a1453f0bcb24ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
