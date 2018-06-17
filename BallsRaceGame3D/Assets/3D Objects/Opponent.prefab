@@ -118,6 +118,7 @@ MonoBehaviour:
   leftRightspeed: 20
   checkDistance: 50
   offsetCheck: 0.53
+  lrOffset: 3
 --- !u!135 &135594829550468430
 SphereCollider:
   m_ObjectHideFlags: 1
