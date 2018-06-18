@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1682161863109076}
+  m_RootGameObject: {fileID: 1402661299633986}
   m_IsPrefabParent: 1
---- !u!1 &1682161863109076
+--- !u!1 &1402661299633986
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4792597788652590}
-  - component: {fileID: 114275100265302074}
-  - component: {fileID: 114166210266480740}
-  - component: {fileID: 114961756021285814}
-  - component: {fileID: 114676420054352796}
-  - component: {fileID: 82986460266479656}
+  - component: {fileID: 4391321619073770}
+  - component: {fileID: 114113033524442798}
+  - component: {fileID: 114343085079489664}
+  - component: {fileID: 114522499983735488}
+  - component: {fileID: 114293808767267138}
+  - component: {fileID: 82223565207029380}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31,12 +31,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4792597788652590
+--- !u!4 &4391321619073770
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682161863109076}
+  m_GameObject: {fileID: 1402661299633986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 192.61469, y: 189.30716, z: 895.7288}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -44,12 +44,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82986460266479656
+--- !u!82 &82223565207029380
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682161863109076}
+  m_GameObject: {fileID: 1402661299633986}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -139,28 +139,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114166210266480740
+--- !u!114 &114113033524442798
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682161863109076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a3539608825254ba1bc67b72f0d6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opponentObject: {fileID: 1554237559800026, guid: a026d94f0dc76b244bec14b03c666349,
-    type: 2}
-  OpponentsNum: 10
-  multyplier: 3
-  StartingPoint: -61
---- !u!114 &114275100265302074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682161863109076}
+  m_GameObject: {fileID: 1402661299633986}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2880d3c253d46e44182760bcba4a59a7, type: 3}
@@ -178,12 +162,12 @@ MonoBehaviour:
   - {fileID: 1079394795986072, guid: 2d5072b42ce29654da5af01e8178a369, type: 2}
   numActiveFloors: 10
   spawnz: -61
---- !u!114 &114676420054352796
+--- !u!114 &114293808767267138
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682161863109076}
+  m_GameObject: {fileID: 1402661299633986}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b016ba1d444082744b9b19410666ea23, type: 3}
@@ -205,12 +189,28 @@ MonoBehaviour:
     volume: 70
     loop: 0
     source: {fileID: 0}
---- !u!114 &114961756021285814
+--- !u!114 &114343085079489664
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682161863109076}
+  m_GameObject: {fileID: 1402661299633986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a3539608825254ba1bc67b72f0d6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponentObject: {fileID: 1554237559800026, guid: a026d94f0dc76b244bec14b03c666349,
+    type: 2}
+  OpponentsNum: 10
+  multyplier: 3
+  StartingPoint: -61
+--- !u!114 &114522499983735488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1402661299633986}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8746d4680ef39464188d19240a242238, type: 3}

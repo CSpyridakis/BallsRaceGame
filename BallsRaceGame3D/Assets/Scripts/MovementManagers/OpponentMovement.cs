@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
  */
 public class OpponentMovement : MonoBehaviour {
 
-	public float currentSpeed=11.0f;
+	public float currentSpeed=11.0f;		//
 	public float speedIncreaseRate = 2.0f;
 	public float speedUpLimit = 70.0f;
 	public float leftRightspeed=20.0f;
@@ -27,8 +27,8 @@ public class OpponentMovement : MonoBehaviour {
 	{
 		ID = Random.Range(0, 10000);
 		GameObject fl = GameObject.FindGameObjectWithTag("Floor");
-		leftFloorPoss = -0.1f;//fl.transform.position.x-lrOffset;
-		rightFloorPoss = 7.1f;//fl.transform.position.x + lrOffset;
+		leftFloorPoss = -1f;    //Testing: 0.1f | Real left pos: -1f  | Second test: fl.transform.position.x-lrOffset;
+		rightFloorPoss = 8.4f;  //Testing: 7.1f | Real right pos: 8.4 | Second test: fl.transform.position.x + lrOffset;
 		//Debug.Log("Begin Ball Movement: OK");
 		currentSpeed=Random.Range(7f,16f);
 	}
@@ -89,9 +89,9 @@ public class OpponentMovement : MonoBehaviour {
 		Physics.Raycast(leftCheck, transform.forward, out hitForward);
 		Physics.Raycast(rightCheck, transform.forward, out hitLeft);
 		Physics.Raycast(transform.position, transform.forward, out hitRight);
-		//Debug.DrawRay(leftCheck, transform.forward,Color.yellow);
-		//Debug.DrawRay(transform.position, transform.forward,Color.green);
-		//Debug.DrawRay(rightCheck, transform.forward,Color.blue);
+		//Debug.DrawRay(leftCheck, transform.forward*hitLeft.distance,Color.yellow);
+		//Debug.DrawRay(transform.position, transform.forward*hitForward.distance,Color.green);
+		//Debug.DrawRay(rightCheck, transform.forward*hitRight.distance,Color.blue);
 		
 		//Forward Collision
 		if ((hitForward.distance<hitLeft.distance) && (hitForward.distance<hitRight.distance) && (hitForward.distance<checkDistance+currentSpeed) && hitForward.collider.CompareTag("Obstacle"))
@@ -178,21 +178,26 @@ public class OpponentMovement : MonoBehaviour {
 				lastob = Random.Range(0, 1) == 0 ? -1 : 1;
 			}
 		}
-		//Move right case
+		//Move left case
 		else if(distanceToLeft<distanceToRight && lastob==0)
 		{
+			lastob = -1;
+		}
+		//Move right case
+		else if(distanceToLeft>distanceToRight && lastob==0)
+		{
 			lastob = 1;
 		}
-		//Move left case
-		else if(distanceToLeft>distanceToRight && lastob==0)
+		
+		//Fix Direction in case of Error
+		if (transform.position.x < leftFloorPoss)
+		{
+			lastob = 1;
+		}
+		else if (transform.position.x > rightFloorPoss)
 		{
 			lastob = -1;
 		}
-		//Fix Direction in case of Error
-		if(transform.position.x<leftFloorPoss)
-			lastob = 1;
-		else if (transform.position.x>rightFloorPoss)
-			lastob = -1;
 	}
 	
 	/*

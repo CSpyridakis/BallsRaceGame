@@ -42,7 +42,7 @@ public class OpponentManager : MonoBehaviour
 		Vector3 mv;
 		mv.z = spawnz;
 		mv.y = 1f;
-		mv.x = Random.Range(-1.75f,8.75f);
+		mv.x = Random.Range(-1f,8.4f);
 		gO.transform.position= mv;
 	}
 

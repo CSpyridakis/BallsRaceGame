@@ -116,7 +116,7 @@ MonoBehaviour:
   speedIncreaseRate: 1
   speedUpLimit: 70
   leftRightspeed: 20
-  checkDistance: 50
+  checkDistance: 20
   offsetCheck: 0.53
   lrOffset: 3
 --- !u!135 &135594829550468430
