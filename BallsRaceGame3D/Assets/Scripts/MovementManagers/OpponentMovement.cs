@@ -17,12 +17,15 @@ public class OpponentMovement : MonoBehaviour {
 	public float checkDistance = 50.0f;
 	public float offsetCheck = 0.53f;
 	public float lrOffset = 4f;
-	
+	public GameObject Boosteffect;
+	public GameObject Collisioneffect;
+
 	private float leftFloorPoss;
 	private float rightFloorPoss;
 	private Vector3 moveV;
 	private int lastob =0;
 	private int ID;
+	
 	void Start ()
 	{
 		ID = Random.Range(0, 10000);
@@ -206,15 +209,37 @@ public class OpponentMovement : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.tag=="Booster")
-		{
+		{	
+			//GameObject gO;
+			//gO=Instantiate(Boosteffect,other.transform.position,other.transform.rotation);
+			//gO.transform.SetParent(other.transform);
+			//gO.GetComponent<MeshRenderer>().enabled = false;
+			//gO.GetComponent<BoostManager>().enabled = false;
 			//Debug.Log("Enemy Booster");
 			speedIncrease();
+			//String delBo = "DeleteBoost(" + other + ")";
+			//Invoke(delBo, 0.1f);
 		}
         
 		if (other.tag == "Obstacle")
 		{
+			GameObject gO;
+			gO=Instantiate(Collisioneffect,transform.position,transform.rotation);
+			gO.transform.SetParent(transform);
+			gameObject.GetComponent<MeshRenderer>().enabled = false;
 			//Debug.Log("Enemy Obstacle");
-			Destroy(gameObject);
+			Invoke("DeleteCollide",0.1f);
 		}
+	}
+
+	private void DeleteBoost(GameObject gO)
+	{
+		gO.active = false;
+		//Destroy(gO);
+	}
+
+	private void DeleteCollide()
+	{
+		Destroy(gameObject);
 	}
 }

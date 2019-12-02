@@ -119,6 +119,10 @@ MonoBehaviour:
   checkDistance: 20
   offsetCheck: 0.53
   lrOffset: 3
+  Boosteffect: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
+    type: 2}
+  Collisioneffect: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+    type: 2}
 --- !u!135 &135594829550468430
 SphereCollider:
   m_ObjectHideFlags: 1
