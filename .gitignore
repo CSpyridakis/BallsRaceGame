@@ -38,5 +38,5 @@ BallsRaceGame3D/.idea/*
 BallsRaceGame3D/.idea/
 BallsRaceGame3D/.vs/*
 BallsRaceGame3D/.vs/
-BallsRaceGame3D/Assets/SoundsAndMusics/*
-BallsRaceGame3D/Assets/SoundsAndMusics/
+# BallsRaceGame3D/Assets/SoundsAndMusics/*
+# BallsRaceGame3D/Assets/SoundsAndMusics/
