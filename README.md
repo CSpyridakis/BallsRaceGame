@@ -13,7 +13,7 @@ This repo contains an educational implementation of a 3D Graphics Project using 
 
 ## Usage
 ### Import and Run
-1) Download, install [Blender - version 2.78](https://download.blender.org/release/Blender2.78/), and make sure that .blend files open with that.
+1) Download [Blender - version 2.78](https://download.blender.org/release/Blender2.78/), install it, and make sure that .blend files open with that.
 2) Download [Unity Hub 2.2.1](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe) or later.
 3) Sign up/in to [Unity Hub 2.2.1](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe).
 4) From the Instal tab on [Unity Hub 2.2.1](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe), visit archive versions to download & install [Unity 2018.1.3f1](unityhub://2018.1.3f1/a53ad04f7c7f).
